@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial</title>
+
+    <script>
+
+        var acuNo=0, acuMa=0;
+
+        function abrir(){
+
+            var btnAbrir = document.getElementById("btnAbrir");
+            var div = document.getElementById("div1");
+
+            btnAbrir.hidden = true;
+            div.hidden = false;
+
+        }
+        function validar(){
+
+            var cantidad = document.getElementById("cantidad");
+            var parse = parseInt(cantidad.value);
+
+            if(parse <1 || parse>50){
+
+                alert("Error, cantidad de alumnos entre 1 y 50");
+                cantidad.value = " ";
+
+            }
+
+        }
+        function guardado(){
+
+            
+
+            var asignatura = document.getElementById("asig");
+            var docente = document.getElementById("docente");
+            var año = document.getElementById("año");
+            var comision = document.getElementById("comision");
+            var turno = document.getElementById("turno");
+            var cantidad = document.getElementById("cantidad");
+            var tbody = document.getElementById("tbody");
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2"); 
+            var parseCan = parseInt(cantidad.value);
+
+            if(asignatura.value == ""){
+
+                alert("Falta completar asignatura");
+
+            }else if(docente.value == ""){
+
+                alert("Completar campo docente");
+
+            }else if(año.value == ""){
+
+                alert("Completar campo de año");
+
+            }else if(comision.value == ""){
+
+                alert("Falta completar campo de comision");
+
+            }else if(cantidad.value == ""){
+
+                alert("Falta completar campo de cantidad");
+
+            }else{
+
+                tbody.innerHTML =  tbody.innerHTML + "<tr><td> " + asignatura.value + "</td><td>" + docente.value + "</td><td>"
+                + año.value + "</td><td>" + comision.value + "</td><td>"+ turno.value + "</td><td>" + cantidad.value + "</td></tr>" ;
+
+                if(turno.value == "Mañana"){
+
+                    acuMa+= parseCan;
+                    p1.innerHTML = "La cantidad de alumnos en el turno mañana es "+ acuMa;
+
+                }else if(turno.value == "Noche"){
+
+                    acuNo+= parseCan;
+                    p2.innerHTML = "La cantidad de alumnos en el turno noche es "+ acuNo;
+
+                }                    
+            }
+
+        }
+        function cerrado(){
+
+            var div1 = document.getElementById("div1").hidden = true;
+            var btnAbrir = document.getElementById("btnAbrir").hidden = false;
+
+        }
+
+        //window.onload = acuNo=0, acuMa=0;
+
+    </script>
+
+
+</head>
+<body>
+    
+    <input type="button" id="btnAbrir" value="Abrir" onclick="abrir()">
+
+    <div id="div1" hidden="true">
+
+        <h1>Alta de Materia</h1>
+
+        <label>Asignatura</label><br>
+        <input type="text" placeholder="Matematica" id="asig"><br>
+        <label>Docente</label><br>
+        <input type="text" placeholder="Juan Perez" id="docente"><br>
+        <label>Año</label><br>
+        <input type="number" placeholder="1" id="año"><br>
+        <label>Comision</label><br>
+        <input type="number" placeholder="2" id="comision"><br>
+        <label>Turno</label><br>
+        <select id="turno">
+
+            <option value="Mañana">Mañana</option>
+            <option value="Noche">Noche</option>
+
+        </select><br>
+        <label>Cantidad Alumnos</label><br>
+        <input type="number" id="cantidad" placeholder="33" onchange="validar()"><br>
+        <input type="button" value="Cerrar" id="cerrar" onclick="cerrado()">
+        <input type="button" value="Guardar" id="guardar" onclick="guardado()">
+
+    </div>
+
+
+    <div id="div2">
+
+        <h1>Lista de Materias</h1>
+
+        <table border="1">
+
+            <thead> 
+
+            <th> Asignatura </th>
+            <th> Docente </th>
+            <th> Años </th>
+            <th> Comision </th>
+            <th> Turno </th>
+            <th> Cantidad Alumnos </th>
+
+            </thead>
+
+            <tbody id="tbody">
+
+
+            </tbody>
+
+        </table>
+
+        <p id="p1">La cantidad de alumnos en el turno mañana es 0</p>
+        <p id="p2">La cantidad de alumnos en el turno noche es 0</p>
+
+    </div>
+
+</body>
+</html>

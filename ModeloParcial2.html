@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial</title>
+    <script>
+
+        function btnGuardar(){
+
+            var edad = parseInt(document.getElementById("edad").value);
+            var sexo = document.getElementById("sexo");
+            var nombre = document.getElementById("txtNombre");
+            var apellido = document.getElementById("txtApellido");
+            var telefono = document.getElementById("telefono");
+            var tbody = document.getElementById("tbody");
+            var p = document.getElementById("p");
+            var p2 = document.getElementById("p2");
+
+            if(nombre.value == ""){
+                alert("Falta completar el nombre");
+            }else if(apellido.value == ""){
+                alert("Falta completar el apellido");
+            }else if(telefono.value == ""){
+                alert("Falta completar el telefono");
+            }else if(edad <18 || edad>99){
+                alert("Edad incorrecta");
+            }else{
+                document.getElementById("table").hidden = false;
+                tbody.innerHTML =  tbody.innerHTML + "<tr><td>"+ nombre.value + "</td>" + 
+                "<td>"+ apellido.value + "</td>" + "<td>"+ edad+ "</td>" +
+                "<td>"+ sexo.value + "</td>" + "<td>"+ telefono.value + "</td></tr>";
+
+                if(sexo.value == "Masculino"){
+
+                contH++;
+                acuH = acuH + edad;
+                p.hidden = false;
+                p.innerHTML = "El promedio de de los hombres es: " + (acuH/contH);
+
+                }else if(sexo.value == "Femenino"){
+
+                contM++;
+                acuM = acuM + edad;
+                p2.hidden = false;
+                p2.innerHTML = "El promedio de edad de las mujeres es: " + (acuM/contM);
+
+                }
+                
+                
+            }
+
+        }
+
+        window.onload = acuH = 0,contH = 0,contM=0,acuM=0;
+
+    </script>
+
+</head>
+<body>
+     
+    <label>Nombre</label><br>
+    <input type="text" placeholder="Juan" id="txtNombre">
+    <br>
+    <label>Apellido</label><br>
+    <input type="text" placeholder="Perez" id="txtApellido">
+    <br>
+    <label>Años</label><br>
+    <input type="number" value="1" id="edad">
+    <br>
+    <label>Sexo</label><br>
+    <select name="" id="sexo">
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>
+    </select>
+    <br>
+    <label>Telefono</label><br>
+    <input type="number" placeholder="1533334444" maxlength="5" id="telefono">
+    <br>
+    <input type="button" value="Guardar" onclick="btnGuardar()">
+    <br><br>
+    <table border="1" hidden="true" id="table">
+
+        <thead>
+
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Años</th>
+        <th>Sexo</th>
+        <th>Telefono</th>
+
+        </thead>
+        
+        <tbody id="tbody">
+
+        </tbody>
+        
+    </table>
+
+    <p  id = "p" hidden="true"> </p>
+    <p  id = "p2" hidden="true">  </p>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+
+    <script>
+
+        function edad(){
+
+            var inputEdad = document.getElementById("inputEdad");
+            var inputNombre = document.getElementById("inputNombre");
+            var inputEmail = document.getElementById("inputEmail");
+            var labelNom = document.getElementById("labelNombre");
+            var labelEmail = document.getElementById("labelEmail");
+            var boton = document.getElementById("boton");
+
+            if(inputEdad.value >= 18){
+
+                inputNombre.hidden = false;
+                labelNom.hidden = false;
+                inputEmail.hidden = false;
+                labelEmail.hidden = false;
+                boton.hidden = false;
+
+            }
+            
+
+        }
+
+    </script>
+
+</head>
+<body>
+    
+    <h1>Datos para suscripcion: </h1>
+
+    <label>Edad: </label>
+    <input type="text" id="inputEdad" onblur="edad()">
+    <br><br>
+    <label id="labelNombre" hidden="true">Nombre: </label>
+    <br>
+    <input type="text" id="inputNombre" hidden="true">
+    <br>
+    <label id="labelEmail" hidden="true">Email: </label>
+    <br>
+    <input type="text" id="inputEmail" hidden="true">
+    <br>
+    <input type="button" value="Enviar" id="boton" hidden="true">
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+
+    <script>
+
+        function revisar(){
+
+            var inpMarca = document.getElementById("txtMarca");
+            var inpPatente = document.getElementById("txtPatente");
+            var inpPatenteNum = document.getElementById("txtPatenteNum");
+            var inpPatenteLetra = document.getElementById("txtPatenteLetra");
+            var inpModelo = document.getElementById("txtModelo");
+            var labelText = document.getElementById("labelText");
+            var labelText1 = document.getElementById("labelText1");
+            var labelText2 = document.getElementById("labelText2");
+            var tabla = document.getElementById("tbody");
+
+            if(inpMarca.value == "" || inpPatente.value == "" || inpPatenteNum.value == "" || inpPatenteLetra.value == "" || inpModelo.value == "" ){
+
+                alert("Falta completar datos");
+
+            }else{
+
+                if(inpPatenteNum.value<0 || inpPatenteNum.value>999){
+
+                    alert("¡Error!");
+                    labelText1.hidden = false;
+                    labelText1.innerHTML =  "<br>" + "Ingrese numero de 3 digitos";
+
+                }else if(inpModelo.value <2016 || inpModelo.value>2020){
+
+                    alert("¡Error!");
+                    labelText2.hidden = false;
+                    labelText2.innerHTML =  "<br>" + "Modelo no permetido";
+                    
+                }else{
+
+                    labelText1.hidden = true;
+                    labelText2.hidden = true;
+                    
+                }
+                
+
+            }
+
+            var patente = inpPatente.value + inpPatenteNum.value + inpPatenteLetra.value ;
+                    
+            tabla.innerHTML = tabla.innerHTML +"<tr><td>" + inpMarca.value + "</td>" 
+            + "<td>"+ patente + "</td>"
+            +"<td>" + inpModelo.value + "</td></tr>";
+
+        }
+
+
+    </script>
+
+</head>
+<body>
+    
+    <label for="">Marca</label>
+    <br>
+    <input type="text" placeholder="Toyota" id="txtMarca">
+    <label id="labelText"></label>
+    <br>
+    <label for="">Patente</label>
+    <br>
+    <input type="text" placeholder="AA" id="txtPatente">
+    <input type="number" placeholder="000" id="txtPatenteNum">
+    <input type="text" placeholder="AA" id="txtPatenteLetra">
+    <label id="labelText1"></label>
+    <br>
+    <label for="">Modelo</label>
+    <br>
+    <input type="number" placeholder="2019" id="txtModelo">
+    <label id="labelText2"></label>
+    <br><br>
+    <input type="button" value="Guardar" id="btnGuardar" onclick="revisar()">
+    <br><hr>
+    <h1>Lista de autos</h1>
+
+    <table border="1">
+
+        <thead>
+
+            <th> Marca </th>
+            <th> Patente </th>
+            <th> Modelo </th>
+
+        </thead>
+
+        <tbody id="tbody">
+
+        </tbody>
+
+    </table>
+
+</body>
+</html>

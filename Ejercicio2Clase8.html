@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Ejercicio2</title>
+
+	<script type="text/javascript">
+		
+		function validar(){
+
+			var correo, contra, repetir,doc,men = "";
+
+			correo = document.getElementById("txtCorreo").value;
+			contra = document.getElementById("txtPass").value;
+			repetir = document.getElementById("txtRep").value;
+			doc = document.getElementById("txtDoc").value;
+
+			if(correo == "" ){
+
+				men = "Le falto completar el correo! \n";
+
+			}
+
+
+			if(contra == "" ){
+
+				men = men + "Le falto completar la contrasenia\n";
+
+			}
+
+
+			if( repetir == ""){
+
+				men = men + "Le falto repetir la contrasenia\n";
+
+			}
+			if( doc == ""){
+
+				men = men + "Le falto el documento";
+
+			}
+
+			if(men != ""){
+
+				alert(men);
+
+			}else{
+
+				if(contra == repetir){
+
+					alert("Bienvenido");
+
+				}else{
+
+					alert("Las contrasenias no coinciden!");
+
+				}
+
+			}
+
+		}
+
+	</script>
+
+</head>
+<body>
+
+	<label>Correo: </label>
+	<input type="text" name="" id="txtCorreo" value="" placeholder="Tu email" />
+	<br><br>
+	<label>Password: </label>
+	<input type="password" name="" id="txtPass" placeholder="tu constrasenia">
+	<br><br>
+	<label>Repetir Password: </label>
+	<input type="password" name="" id="txtRep" placeholder="Repeti contrasenia">
+	<br><br>
+	<label>DNI</label>
+	<input type="radio" name="doc" />
+	<label>Passaporte</label>
+	<input type="radio" name="doc" />
+	<label>Otro</label>
+	<input type="radio" name="doc" />
+	<input type="text" name="" id="txtDoc" placeholder="Documento">
+	<br><br>
+	<label>Sexo:</label>
+	<select name="sexo" id="sexo">
+		
+		<option value="Masculino"> Masculino </option>
+		<option value="Femenino"> Femenino </option>
+
+	</select>
+	<br><br>
+	<input type="button" name="" value="Registrar" onclick="validar()">
+
+</body>
+</html>

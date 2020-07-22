@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title>
+
+    <script>
+
+        function mostrar(){
+
+            var lenguaje = document.getElementById("opciones").value;
+            var txtLabel = document.getElementById("labelLenguaje");
+            if(lenguaje == "opc1"){
+
+                txtLabel.hidden = false;
+                txtLabel.innerHTML = "Su lenguaje favorito es JAVA";
+
+            }else if(lenguaje == "opc2"){
+
+                txtLabel.hidden = false;
+                txtLabel.innerHTML = "Su lenguaje favorito es HTML";
+
+            }else{
+
+                txtLabel.hidden = false;
+                txtLabel.innerHTML = "Su lenguaje favorito es JAVASCRIPT";
+
+            }
+
+        }
+
+    </script>
+
+</head>
+<body>
+    
+    <h1>Lenguajes</h1>
+
+    <label>Seleccione su lenguaje favorito</label>
+    <br><br>
+    <select id="opciones" onchange="mostrar()">
+
+        <option value="opc1">JAVA</option>
+        <option value="opc2">HTML</option>
+        <option value="opc3">JAVASCRIPT</option>
+
+    </select>
+    <br><br>
+    <label id="labelLenguaje" hidden="true"> </label>
+
+</body>
+</html>

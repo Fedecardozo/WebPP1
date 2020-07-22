@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title> Ejercicio1</title>
+
+	<script type="text/javascript">
+		
+		function validar(){
+
+			var usu = document.getElementById('txtUsu');
+			var usuValue = usu.value;
+			var cont = document.getElementById('txtCon');
+			var contValue = cont.value;
+
+			if(usuValue == "usuario" && contValue == "1234" ){
+
+				alert("Usuario correcto");
+
+			}else if(usuValue == ""	|| contValue == ""){
+
+				alert(" Debe completar el campo de usuario y contraseña");
+
+			}else{
+
+				alert("Usuario incorrecto!"); //42391414
+
+			}
+
+		}
+
+
+	</script>
+
+</head>
+<body>
+
+	<label>Usuario: </label>
+	<br>
+	<input type="text" name="" id="txtUsu" value="">
+	<br>
+	<label>Contrasenia: </label>
+	<br>
+	<input type="password" name="" id="txtCon">
+	<br>
+	<input type="checkbox" name="">
+	<label>Recordar usuario y contrasenia</label>
+	<br>
+	<input type="button" name="" value="Enviar" onclick="validar()">
+	<input type="button" name="" value="Limpiar">
+
+</body>
+</html>
