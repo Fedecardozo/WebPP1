@@ -1,0 +1,23 @@
+*{
+
+    box-sizing: border-box;
+
+}
+.div1{
+
+    background-color: blue;
+    padding: 3%;
+    font-size: 20px;
+
+}
+.div2{
+
+    background-color: brown;
+    padding: 3%;
+    font-size: 20px;
+}
+span{
+
+    text-decoration: underline;
+
+}
