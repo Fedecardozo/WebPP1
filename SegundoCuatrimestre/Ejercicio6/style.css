@@ -1,0 +1,77 @@
+form{
+
+    background-color: darkslateblue;
+    height: 220px;
+    width: 40%;
+    padding: 3%;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 30%;
+    margin-top: 2%;
+    
+}
+div.cont-name{
+
+    flex: 2 1 auto;
+    width: 100%;
+
+}
+div.cont-edad{
+
+    flex: 2 1 auto;
+    width: 100%;
+
+}
+label{
+
+    font-size: 25px;
+    color: moccasin;
+    /*background-color: lightsalmon;
+    /*padding: 10px;
+    margin: 10px;*/
+
+}
+.sinError{
+
+    width: 100%;
+    padding: 10px 5px;
+    border: 2px solid lightgray;
+
+}
+.boton{
+
+    flex:  1 1 auto;
+    background-color: dimgrey;
+    color: wheat;
+    padding: 10px 5px;
+    width: 40%;
+    border: 1px solid lightgray;
+    margin: 2%;
+
+}
+.boton:hover{
+
+    background-color: lightgray;
+    color: black;
+    cursor: pointer;
+
+
+}
+.error{
+
+    width: 100%;
+    padding: 10px 5px;
+    border: 2px solid red;
+
+}
+.menor{
+
+    width: 100%;
+    padding: 10px 5px;
+    border: 2px solid yellow;
+
+}
