@@ -10,7 +10,7 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: #cccccc;
 }
-/*Intento centrar el boton*/
+/*Centro el boton*/
 .boton-centrado{
 
     display: block;
@@ -53,13 +53,6 @@ div.container-abierto{
     background-color: #cccccc;
 
 }
-div.container-cerrado{
-    /*******Desactivo el display:flex por que no me deja ocultar el contenedor***********/
-    /* display: flex; */
-    justify-content: center;
-    background-color: #cccccc;
-
-}  
 form{
 
     background-color: darkslateblue;
