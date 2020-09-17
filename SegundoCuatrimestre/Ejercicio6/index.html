@@ -13,20 +13,23 @@
         Cuando se ingrese la información, cambie el borde de los input a rojo si están vacios y 
         si la edad es menor a 18, cambie el borde a amarillo. -->
         
+        <div class="container">
 
-        <form action="" id="formulario">
+            <form action="" id="formulario">
+    
+                <div class="cont-name">
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" class="sinError" id="nombre" placeholder="Ingrese su nombre">
+                </div>
+                <div class="cont-edad">
+                    <label for="edad">Edad:</label><br>
+                    <input type="number" class="sinError" id="edad" placeholder="Ingrese su edad">
+                </div>
+                <input type="button" value="Guardar" class="boton" onclick="btnGuardar()">
+    
+            </form>
+            
+        </div>
 
-            <div class="cont-name">
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" class="sinError" id="nombre" placeholder="Ingrese su nombre">
-            </div>
-            <div class="cont-edad">
-                <label for="edad">Edad:</label><br>
-                <input type="number" class="sinError" id="edad" placeholder="Ingrese su edad">
-            </div>
-            <input type="button" value="Guardar" class="boton" onclick="btnGuardar()">
-
-        </form>
-        
 </body>
 </html>
