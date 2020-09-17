@@ -1,12 +1,21 @@
+function abrir(){
+
+    var abrir = document.getElementById("abrir");
+    var contenedor = document.getElementById("contenedor");
+
+    abrir.className="boton-cerrado";
+    abrir.hidden="true";  
+    contenedor.className = "conteiner-abierto";
+    contenedor.hidden="false";
+    
+}
+
 
 function btnGuardar(){
 
     var inputEdad = document.getElementById("edad");
     var inputNombre = document.getElementById("nombre");
-    var abrir = document.getElementById("abrir");
-    var contenedor = document.getElementById("contenedor");
-
-
+    
     //alert(inputNombre.className);
     if(inputNombre.value == ""){
 

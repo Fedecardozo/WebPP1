@@ -13,17 +13,17 @@
         Cuando se ingrese la información, cambie el borde de los input a rojo si están vacios y 
         si la edad es menor a 18, cambie el borde a amarillo. -->
 
-        <div class="boton-centrado" id="abrir">
+        <div class="boton-centrado">
 
-            <button>Abrir</button>
+            <button id="abrir" onclick="abrir()">Abrir</button>
 
         </div>
 
-        <div class="container-cerrado" id="contenedor" hidden="true">
+        <div class="container-abierto">
 
-            <form action="" id="formulario" >
+            <form action="" id="formulario">
     
-                <div class="cont-name" >
+                <div class="cont-name">
                     <label for="nombre">Nombre:</label><br>
                     <input type="text" class="sinError" id="nombre" placeholder="Ingrese su nombre">
                 </div>
