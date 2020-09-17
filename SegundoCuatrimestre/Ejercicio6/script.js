@@ -3,6 +3,8 @@ function btnGuardar(){
 
     var inputEdad = document.getElementById("edad");
     var inputNombre = document.getElementById("nombre");
+    var contenedor = document.getElementById("contenedor");
+
 
     //alert(inputNombre.className);
     if(inputNombre.value == ""){

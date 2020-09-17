@@ -3,12 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Pongo el form dentro de un contenedor asi poder centrarlo con justy-content*/ 
 div.container{
 
     display: flex;
     /* align-items: center; */
     justify-content: center;
     /* background-color: black; */
+    background-color: #cccccc;
 
 } 
 form{
@@ -17,7 +19,7 @@ form{
     height: 220px;
     width: 40%;
     padding: 3%;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -28,7 +30,7 @@ form{
     
 }
 div.cont-name{
-
+/* Hago que el div mida el 100% del padre*/
     flex: 2 1 auto;
     width: 100%;
 
