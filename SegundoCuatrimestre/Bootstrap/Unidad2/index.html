@@ -8,38 +8,62 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
+<body class="bg-light">
+    <div class="container">
 
-    <label for="nombre">Nombre de pila</label>
-    <input type="text">
-    <label for="apellido">Apellido</label>
-    <input type="text">
-    <label for="usuario">Nombre de usuario</label>
-    <input type="text" placeholder="Nombre de usuario">
-    <label for="correo">Correo electrónico</label>
-    <input type="text" placeholder="you@example.com">
-    <label for="">Habla a</label>
-    <input type="text" placeholder="1234 Main St">
-    <label for="direccion">Direccion 2</label>
-    <input type="text" placeholder="Apartamento o suite">
-    <label for="pais">Pais</label>
-    <select name="pais" id="pais">
-        <option value="Argentina">Argentina</option>
-        <option value="Brasil">Brasil</option>
-        <option value="Paraguay">Paraguay</option>
-    </select>
-    <select name="estado" id="estado">
-        <option value="BsAs">Buenos Aires</option>
-        <option value="pampa">La Pampa</option>
-        <option value="cordoba">Cordoba</option>
-    </select>
-    <label for="CP">Codigo Postal</label>
-    <input type="number">
+        <form action="">
+            <div class="form-group">
+                <label for="nombre">Nombre de pila</label>
+                <input type="text">
+                <label for="apellido">Apellido</label>
+                <input type="text">
+            </div>
+            <div class="form-group">
+                <label for="usuario">Nombre de usuario</label>
+                <input type="text" placeholder="Nombre de usuario">
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo electrónico</label>
+                <input type="text" placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+                <label for="">Habla a</label>
+                <input type="text" placeholder="1234 Main St">
+            </div>
+            <div class="form-group">
+                <label for="direccion">Direccion 2</label>
+                <input type="text" placeholder="Apartamento o suite">
+            </div>
+            <div class="form-inline">
+                <label for="pais">Pais</label>
+                <select name="pais" id="pais">
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Paraguay">Paraguay</option>
+                </select>
+                <label for="estado">Estado</label>
+                <select name="estado" id="estado">
+                    <option value="BsAs">Buenos Aires</option>
+                    <option value="pampa">La Pampa</option>
+                    <option value="cordoba">Cordoba</option>
+                </select>
+                <label for="CP">Codigo Postal</label>
+                <input type="number">
+            </div>
+            <div class="checkbox-group">
 
-    <input type="checkbox" name="uno" id="uno">
-    <p>La dirección de envío es la misma que mi diricción de facturación</p>
-    <input type="checkbox" name="dos" id="dos">
-    <p>Guarde esta información para la proxima vez</p>
+                <input type="checkbox" name="uno" id="uno">
+                <p>La dirección de envío es la misma que mi diricción de facturación</p>
+                <input type="checkbox" name="dos" id="dos">
+                <p>Guarde esta información para la proxima vez</p>
+            
+            </div>
+
+        </form>
+        
+    
+    
+    </div>
     
 </body>
 </html>
