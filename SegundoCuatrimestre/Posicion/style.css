@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flota{
+
+    background-color: black;
+    height: 50vh;  
+    
+}
+.mas{
+
+    background-color: yellowgreen;
+    color: white;
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem 1rem 0 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+
+}
+span{
+
+    display: block;
+    margin-top: 0.7rem;
+    font-size: 1.5rem;
+}
