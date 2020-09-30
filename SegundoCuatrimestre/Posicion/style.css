@@ -4,15 +4,14 @@
     box-sizing: border-box;
 }
 
-.flota{
-
-    background-color: black;
-    height: 50vh;  
-    
-}
+/* Centrar como el th */
+/* display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center */
 .mas{
 
-    background-color: yellowgreen;
+    background-color: rgb(13, 170, 13);
     color: white;
     border-radius: 100%;
     width: 3rem;
@@ -28,4 +27,29 @@ span{
     display: block;
     margin-top: 0.7rem;
     font-size: 1.5rem;
+}
+table{
+
+    width: 100%;
+    margin-top: 2rem;
+    /* border-collapse: none; */
+    border-spacing: 0;
+    text-align: left;
+
+}
+table th{
+
+    background-color: green;
+    color: white;
+    height: 2rem;
+    padding-left: 0.7rem;
+}
+tr:nth-child(odd) {
+    background-color: wheat;
+}
+table td{
+
+    height: 2rem;
+    padding-left: 0.7rem;
+
 }
