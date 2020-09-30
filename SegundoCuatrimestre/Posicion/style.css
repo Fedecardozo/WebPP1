@@ -53,3 +53,35 @@ table td{
     padding-left: 0.7rem;
 
 }
+/*****************FORMULARIO********************/
+div.container{
+
+    background-color: lightgrey;
+    margin: auto;
+    padding: 1rem;
+    width: 40%;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+div.botones{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+button.aceptar{
+    background-color: rgb(44, 134, 44);
+    padding: 0.8rem 2rem;
+    border: 1px solid whitesmoke;
+    text-decoration: none;
+    color: whitesmoke;
+    border-radius: 5px;
+
+}
+button.cancelar{
+    background-color: rgb(201, 73, 84);
+    padding: 0.8rem 2rem;
+    color: whitesmoke;
+    text-decoration: none;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
