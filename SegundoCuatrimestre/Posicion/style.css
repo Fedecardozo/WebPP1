@@ -9,7 +9,12 @@
     vertical-align: inherit;
     font-weight: bold;
     text-align: -internal-center */
-.mas{
+
+/*Centrar como el boton*/
+    /* display: inline-block;
+    text-align: center;
+    align-items: flex-start; */
+button.mas{
 
     background-color: rgb(13, 170, 13);
     color: white;
@@ -19,15 +24,23 @@
     margin: 1rem 1rem 0 0;
     position: fixed;
     right: 0;
-    text-align: center;
+    border: none;
+    font-size: 2rem;
+    /* text-align: center; */
 
 }
-span{
+button.mas:hover{
+
+    cursor: pointer;
+    background-color: thistle;
+
+}
+/* span{
 
     display: block;
     margin-top: 0.7rem;
     font-size: 1.5rem;
-}
+} */
 table{
 
     width: 100%;
@@ -62,6 +75,9 @@ div.container{
     width: 40%;
     border-radius: 5px;
     margin-top: 1rem;
+    position: relative;
+    bottom: 100px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 div.botones{
     margin-top: 1rem;
@@ -84,4 +100,16 @@ button.cancelar{
     text-decoration: none;
     border: 1px solid whitesmoke;
     border-radius: 5px;
+}
+button.cancelar:hover{
+
+    cursor: pointer;
+    background-color: lightskyblue;
+
+}
+button.aceptar:hover{
+
+    cursor: pointer;
+    background-color: lightskyblue;
+
 }

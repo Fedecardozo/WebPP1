@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posicionamiento</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+
+        function mostrar(){
+
+            var container = document.getElementById("container");
+            container.hidden = false;
+            
+        }
+        function cancelar(){
+
+            var cancelar = document.getElementById("container");
+            cancelar.hidden = true;
+        }
+
+    </script>
 </head>
 <body>
     
@@ -14,9 +29,10 @@
           una sombra al hacer click sobre el botón +c.El div debe estar en el centro de la pantallad.
           Los botones agregar y cancelar deben estar uno a la izquierda y otro a la derecha 
           distanciados de los márgenes. -->
-    <div class="mas">
+    <!-- <div class="mas">
         <span>+</span>
-    </div>
+    </div> -->
+    <button class="mas" id="mas" onclick="mostrar()">+</button>
     <h2>Lista de personas</h2>    
     
     <table>
@@ -49,7 +65,7 @@
 
     </table>
 
-    <div class="container">
+    <div id="container" class="container" hidden>
 
         <div class="formulario">
 
@@ -62,7 +78,7 @@
         <div class="botones">
 
             <button class="aceptar">Aceptar</button>
-            <button class="cancelar">Cancelar</button>
+            <button class="cancelar" onclick="cancelar()">Cancelar</button>
 
         </div>
 
